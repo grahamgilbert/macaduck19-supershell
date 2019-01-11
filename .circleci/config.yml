@@ -13,7 +13,7 @@ jobs:
           command: apt install -y shellcheck
       - run:
           name: ShellCheck
-          command: shellcheck $CIRCLE_WORKING_DIRECTORY/super_shell.sh
+          command: shellcheck super_shell.sh
 
 workflows:
   version: 2
