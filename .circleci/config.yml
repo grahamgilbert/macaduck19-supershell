@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: ShellCheck
-          command: for file in $(find . -type f); do shellcheck --format=gcc $file; done;
+          command: for file in $(find $CIRCLE_WORKING_DIRECTORY -type f); do shellcheck --format=gcc $file; done;
 
 workflows:
   version: 2
