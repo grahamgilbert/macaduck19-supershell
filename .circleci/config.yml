@@ -2,12 +2,18 @@ version: 2
 jobs:
   shellcheck:
     docker:
-      - image: koalaman/shellcheck:stable
+      - image: debian:stable-slim
     steps:
       - checkout
       - run:
+          name: Update
+          command: apt update
+      - run:
+          name: Install
+          command: apt install -y shellsheck
+      - run:
           name: ShellCheck
-          command: $CIRCLE_WORKING_DIRECTORY/super_shell.sh
+          command: shellcheck $CIRCLE_WORKING_DIRECTORY/super_shell.sh
 
 workflows:
   version: 2
