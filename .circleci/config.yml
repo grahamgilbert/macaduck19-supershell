@@ -10,7 +10,7 @@ jobs:
           command: apt update
       - run:
           name: Install
-          command: apt install -y shellsheck
+          command: apt install -y shellcheck
       - run:
           name: ShellCheck
           command: shellcheck $CIRCLE_WORKING_DIRECTORY/super_shell.sh
