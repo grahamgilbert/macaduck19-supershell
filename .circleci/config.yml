@@ -8,3 +8,9 @@ jobs:
       - run:
           name: ShellCheck
           command: for file in $(find . -type f); do shellcheck --format=gcc $file; done;
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - shellcheck
