@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: ShellCheck
-          command: super_shell.sh
+          command: $CIRCLE_WORKING_DIRECTORY/super_shell.sh
 
 workflows:
   version: 2
