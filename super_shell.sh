@@ -1,5 +1,5 @@
 #!/bin/bash
 
-$hello = "hello world"
+hello="hello world"
 
-echo $hello
+echo "$hello"
