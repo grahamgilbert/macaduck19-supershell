@@ -1,1 +1,1 @@
-# macaduck19-supershell
+# practicalcicd-supershell
