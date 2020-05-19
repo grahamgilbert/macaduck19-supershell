@@ -1,4 +1,4 @@
 #!/bin/bash
 
-$hello = "hello world"
-echo $hello
+hello="hello world"
+echo "$hello"
